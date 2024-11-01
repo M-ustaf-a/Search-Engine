@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Message } from "./ChatWindow";
 import { formatTimeDifference } from "@/lib/utils";
-import { Clock, Edit, Share, Trash } from "lucide-react";
+import { Clock, Earth, Edit, Globe, Share, Trash } from "lucide-react";
 
 const Navbar = ({ messages }: { messages: Message[] }) => {
   const [title, setTitle] = useState<string>("");
@@ -39,17 +39,23 @@ const Navbar = ({ messages }: { messages: Message[] }) => {
   }, []);
 
   return (
-    <div className="fixed text-white/70 z-40 top-0 left-0 right-0 px-4 lg:pl-[104px] lg:pr-6 lg:px-8 flex flex-row items-center justify-between w-full py-4 text-sm border-b bg-[#0A0A0A] border-[#1C1C1C]">
-      <Edit
+    <div className="fixed text-white z-40 top-0 left-0 right-0 px-4 lg:pl-[104px] lg:pr-6 lg:px-8 flex flex-row items-center justify-between w-full py-4 text-sm border-b bg-[#0A0A0A] border-[#1C1C1C]">
+      {/* <Edit
         size={17}
         className="active:scale-95 transition duration-100 cursor-pointer lg:hidden"
-      />
-      <div className="hidden lg:flex flex-row items-center justify-center space-x-2">
-        <Clock size={17} />
+      /> */}
+      <a href="/">
+      <div className="flex">
+      <Globe size={25} className="active:scale-95 transition duration-100 cursor-pointer"/>
+      <h1 className="text-xl">Ai</h1>
+      </div>
+      </a>
+      <div className="flex flex-row items-center justify-center space-x-2">
+        <Clock size={17}/>
         <p className="text-xs">{timeAgo} ago</p>
       </div>
-      <p className="hidden lg:flex">{title}</p>
-      <div className="flex flex-row space-x-4 items-center">
+      {/* <p className="hidden lg:flex">{title}</p> */}
+      {/* <div className="flex flex-row space-x-4 items-center">
         <Share
           size={17}
           className="active:scale-95 transition duration-100 cursor-pointer"
@@ -58,7 +64,7 @@ const Navbar = ({ messages }: { messages: Message[] }) => {
           size={17}
           className="active:scale-95 transition duration-100 cursor-pointer"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

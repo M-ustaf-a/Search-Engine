@@ -3,6 +3,7 @@
 import {
   BookOpenText,
   CircleAlert,
+  Globe,
   Home,
   Search,
   Settings,
@@ -24,7 +25,8 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
       <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-20 lg:flex-col">
         <div className="flex grow flex-col items-center justify-between gap-y-5 overflow-y-auto bg-[#111111] px-2 py-8">
           <a href="/">
-            <SquareIcon className="text-white cursor-pointer" />
+            {/* <SquareIcon className="text-white cursor-pointer" /> */}
+            {/* <Globe className="text-white cursor-pointer"/> */}
           </a>
           <Settings
             onClick={() => setIsSettingsOpen(!isSettingsOpen)}

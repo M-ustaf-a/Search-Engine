@@ -6,9 +6,12 @@ import Sidebar from "@/components/Sidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Future Search - Chat with internet",
+  title: "Ai Globe - Chat with internet",
   description:
-    "Future Search is an AI powered that is connected to the internet",
+    "Ai Golbe is an AI powered that is connected to the internet",
+  icons: {
+    icon: "./globe.svg",
+  },
 };
 
 export default function RootLayout({

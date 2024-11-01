@@ -5,6 +5,7 @@ import {
   BookCopy,
   Disc3,
   FilePen,
+  Globe,
   Layers3,
   Plus,
   PlusIcon,
@@ -54,13 +55,12 @@ const MessageBox = ({
 
       setSpeechMessage(message.content.replace(regex, ""));
 
-      // message.suggestions = [
-      //   "tell me about his products at apple",
-      //   "tell me about this personal journey",
-      // ];
       message.suggestions = [
+        "tell me about his products at apple",
+        "tell me about this personal journey",
+      ];
+      
 
-      ]
       return setParsedMessage(
         message.content.replace(
           regex,
@@ -105,7 +105,7 @@ const MessageBox = ({
             )}
             <div className="flex flex-col space-y-2">
               <div className="flex flex-row items-center space-x-2">
-                <Disc3
+                <Globe
                   className={cn(
                     "text-white",
                     isLast && loading ? "animate-spin" : "animate-none"

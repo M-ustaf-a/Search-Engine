@@ -1,4 +1,3 @@
-import { ChatOpenAI, OpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { BaseMessage } from "@langchain/core/messages";
 import {
   RunnableSequence,
@@ -14,7 +13,6 @@ import {
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { searchSearxng } from "../lib/searxng";
 import { Document } from "@langchain/core/documents";
-import { query } from "express";
 import computeSimilarity from "../utils/computeSimilarity";
 import eventEmitter from "events";
 import type { StreamEvent } from "@langchain/core/tracers/log_stream";
@@ -38,7 +36,7 @@ Rephrased question:
 `;
 
 const basicAcademicSearchResponsePrompt = `
-    You are futuresearch, an AI model who is expert at searching the web and answering user's queries. You are set on focus mode 'Acadedemic', this means you will be searching for academic papers and articles on the web.
+    You are Ai Globe, an AI model who is expert at searching the web and answering user's queries. You are set on focus mode 'Acadedemic', this means you will be searching for academic papers and articles on the web.
     Generate a response that is informative and relevant to the user's query based on provided context (the context consits of search results containg a brief description of the content of that page).
     You must use this context to answer the user's query in the best way possible. Use an unbaised and journalistic tone in your response. Do not repeat the text.
     You must not tell the user to open any link or visit any website to get the answer. You must provide the answer in the response itself. If the user asks for links you can provide them.
